@@ -10,9 +10,6 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class AppleController {
 
-	private static final String template = "Hello, %s!";
-	private final AtomicLong counter = new AtomicLong();
-
 	@GetMapping("/appleTotals")
 	public AppleTotals apple(@RequestParam(value = "stint_a", defaultValue = "0") String stint_a) {
 		AppleTotals totals = new AppleTotals();
